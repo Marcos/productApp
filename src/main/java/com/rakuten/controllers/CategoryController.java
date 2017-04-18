@@ -4,7 +4,6 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,11 +46,7 @@ public class CategoryController {
     }
 
 	@PostMapping("/category/save")
-	public ModelAndView save(@Valid Category category, BindingResult result) {
-		if (result.hasErrors()) {
-			return edit(category);
-		}
-
+	public ModelAndView save(@Valid Category category) {
 		service.save(category);
 		return category();
 	}
