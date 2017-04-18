@@ -14,7 +14,7 @@ $ mvn clean install
 ```
 
 ## Database configuration
-It is neeeded to have a local postgres database configured with users `postgres`, password `postgres` and database name `productapp`
+It is neeeded to have a local postgres database configured with users `postgres`, password `postgres` and database name `productapp`. You can also define a different database configuring the [property file](https://github.com/Marcos/productApp/blob/master/src/main/resources/application.properties#L12).
 
 
 ## Running
