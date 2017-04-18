@@ -5,7 +5,7 @@ Simple apllication to manage products.
 Features:
  - Manage categories
  - Manage products
- - Define prices in many currencies
+ - Define product prices in many currencies
 
 ## Build
 
@@ -14,7 +14,7 @@ $ mvn clean install
 ```
 
 ## Database configuration
-It is neeeded to have a local postgres database configured with users "postgres", password "postgres" and database name "productapp"
+It is neeeded to have a local postgres database configured with users `postgres`, password `postgres` and database name `productapp`
 
 
 ## Running
@@ -25,4 +25,4 @@ $ mvn spring-boot:run
 
 ## Using
 
-To use you can log in with user "admin" and password "admin"
+After running, you can log in with user "admin" and password "admin"
