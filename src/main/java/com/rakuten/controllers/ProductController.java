@@ -49,9 +49,7 @@ public class ProductController {
 	}
 
 	@PostMapping("/product/save")
-	public ModelAndView save(@Valid Product product, BindingResult result) throws CurrencyNotFoundException {
-		if (result.hasErrors())
-			return edit(product);
+	public ModelAndView save(@Valid Product product) throws CurrencyNotFoundException {
 		service.save(product);
 		return product();
 	}
