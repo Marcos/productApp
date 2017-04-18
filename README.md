@@ -25,4 +25,4 @@ $ mvn spring-boot:run
 
 ## Using
 
-After running, you can log in with user "admin" and password "admin"
+After running, you can log in with user `admin` and password `admin`
