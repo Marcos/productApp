@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Edit Category</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div  th:replace="fragments/menu"></div>
+	<h1>Category</h1>
+	<form action="#" th:object="${category}" th:action="@{/category/save}" method="post">
+		<input type="hidden" th:field="*{id}" />
+		<p>
+			Name: <input type="text" th:field="*{name}" />
+		</p>
+		<p>
+			Category Owner: 
+			 <select th:field="*{owner}">
+                <option value=""></option>
+                <option th:each="category : ${categories}" th:value="${category.id}"  th:text="${category.name}"></option>
+            </select>
+		</p>
+		<button type="submit">Salvar</button>
+		<a th:href="@{/category}">Cancelar</a>
+	</form>
+
+</body>
+</html>
